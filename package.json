@@ -24,7 +24,8 @@
   "dependencies": {
     "gulp": "~3.6.2",
     "gulp-util": "~2.2.14",
-    "through2": "~0.4.1"
+    "through2": "~0.4.1",
+    "yacp": "^0.1.4"
   },
   "devDependencies": {
     "mocha": "*"
