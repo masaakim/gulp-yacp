@@ -13,8 +13,9 @@ module.exports = function (options) {
   }
  */
 
+  options = options || {};
+
   return through.obj(function (file, enc, cb) {
-    console.log(file);
     if (file.isNull()) {
       this.push(file);
       return cb();
@@ -28,7 +29,9 @@ module.exports = function (options) {
     try {
       file.contents = new Buffer(module(file.contents.toString(), options));
       console.log(file.content);
-      var yacp = new Yacp(file.contents)
+      // var yacpFile = file.contents.toString();
+      var yacp = new Yacp(file.contents);
+      file.contents = yacp.toString();
     } catch (err) {
       this.emit('error', new gutil.PluginError('gulp-yacp', err));
     }
