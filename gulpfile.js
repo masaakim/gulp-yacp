@@ -1,10 +1,10 @@
 'use strict';
 
 var gulp = require('gulp');
-var yacp = require('gulp-yacp');
+var yacp = require('./');
 
 gulp.task('test', function () {
-  return gulp.src('test/yacp.css')
+  return gulp.src('test/fixtures/yacp.css')
     .pipe(yacp())
     .pipe(gulp.dest('dist'));
 });
