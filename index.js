@@ -4,6 +4,9 @@ var through = require('through2');
 var module = require('module');
 
 module.exports = function (options) {
+
+  var Yacp = require('yacp');
+
   if (!options.foo) {
     throw new gutil.PluginError('gulp-yacp', '`foo` required');
   }
@@ -21,6 +24,7 @@ module.exports = function (options) {
 
     try {
       file.contents = new Buffer(module(file.contents.toString(), options));
+      var yacp = new Yacp(file.contents)
     } catch (err) {
       this.emit('error', new gutil.PluginError('gulp-yacp', err));
     }
