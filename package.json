@@ -1,0 +1,31 @@
+{
+  "name": "gulp-yacp",
+  "version": "0.0.0",
+  "description": "",
+  "license": "MIT",
+  "repository": "morishitter/gulp-yacp",
+  "author": {
+    "name": "Masaaki Morishita",
+    "email": "ikasama3.0@gmail.com",
+    "url": "https://github.com/morishitter"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin"
+  ],
+  "dependencies": {
+    "gulp-util": "~2.2.14",
+    "through2": "~0.4.1"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
